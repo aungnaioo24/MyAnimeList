@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainListFragment">
+
+    <fragment
+        android:id="@+id/mainListFragment"
+        android:name="com.example.myanimelist.fragment.MainListFragment"
+        android:label="Main List"
+        tools:layout="@layout/fragment_main_list"/>
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.example.myanimelist.fragment.MyListFragment"
+        android:label="My List"
+        tools:layout="@layout/fragment_my_list"/>
+    <fragment
+        android:id="@+id/toWatchFragment"
+        android:name="com.example.myanimelist.fragment.ToWatchFragment"
+        android:label="To Watch"
+        tools:layout="@layout/fragment_to_watch"/>
+</navigation>
