@@ -2,13 +2,12 @@ package com.example.myanimelist.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import retrofit2.Call
+import kotlinx.coroutines.Deferred
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://api.themoviedb.org"
+private const val BASE_URL = "https://api.themoviedb.org/"
 
 // Build the Moshi object with Kotlin adapter factory that Retrofit will be using
 private val moshi = Moshi.Builder()
@@ -23,8 +22,7 @@ private val retrofit = Retrofit.Builder()
 
 interface TmdbApiService {
     @GET("3/tv/popular?api_key=d3e545c3c1c8223dfeb81e07106149a5&with_genres=16&with_original_language=ja&page=1")
-    fun getAnimeSeries():
-            Call<List<AnimeSeries>>
+    suspend fun getAnimeSeriesAsync(): AnimeSeries
 }
 
 object TmdbApi {

@@ -3,25 +3,45 @@ package com.example.myanimelist.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import com.example.myanimelist.network.Serie
 import com.example.myanimelist.network.TmdbApi
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class MainListViewModel : ViewModel() {
 
     private val _status = MutableLiveData<String>()
-    val name: LiveData<String> = _status
+    val status: LiveData<String> = _status
 
+    private val _seriesObject = MutableLiveData<Serie>()
+    val seriesObject: LiveData<Serie> = _seriesObject
 
-    private fun getName() {
-        viewModelScope.launch {
+    private var viewModelJob = Job()
+    private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
+
+    init {
+        getAnimeSeries()
+    }
+
+    private fun getAnimeSeries() {
+        coroutineScope.launch {
+            var getAnimeSeriesDeferred = TmdbApi.retrofitService.getAnimeSeriesAsync()
             try {
-                val listResult = TmdbApi.retrofitService.getAnimeSeries()
-                _status.value = "Success!"
-            } catch (e: Exception) {
-                _status.value = "Error"
+                var listResult = getAnimeSeriesDeferred
+                if(listResult.results.size>0) {
+                    _seriesObject.value = listResult.results[0]
+                }
+            } catch (t: Throwable) {
+                _status.value = "Failure: " + t.message
             }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
     }
 
 }
