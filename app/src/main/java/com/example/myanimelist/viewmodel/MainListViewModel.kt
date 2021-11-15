@@ -15,8 +15,8 @@ class MainListViewModel : ViewModel() {
     private val _status = MutableLiveData<String>()
     val status: LiveData<String> = _status
 
-    private val _seriesObject = MutableLiveData<Serie>()
-    val seriesObject: LiveData<Serie> = _seriesObject
+    private val _seriesObject = MutableLiveData<List<Serie>>()
+    val seriesObject: LiveData<List<Serie>> = _seriesObject
 
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
@@ -31,7 +31,7 @@ class MainListViewModel : ViewModel() {
             try {
                 var listResult = getAnimeSeriesDeferred
                 if(listResult.results.size>0) {
-                    _seriesObject.value = listResult.results[0]
+                    _seriesObject.value = listResult.results
                 }
             } catch (t: Throwable) {
                 _status.value = "Failure: " + t.message

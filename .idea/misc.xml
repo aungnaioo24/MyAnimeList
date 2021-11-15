@@ -4,12 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.18796296296296297" />
+        <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable/ic_broken_image.xml" value="0.30277777777777776" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable/ic_list.xml" value="0.36102564102564105" />
+        <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable/loading_img.xml" value="0.18796296296296297" />
+        <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/drawable/loading_vector.xml" value="0.18796296296296297" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/layout/fragment_main_list.xml" value="0.35052083333333334" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/layout/fragment_my_list.xml" value="0.15833333333333333" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/layout/fragment_to_watch.xml" value="0.15833333333333333" />
+        <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/layout/grid_view_item.xml" value="0.1" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/menu/bottom_nav_bar.xml" value="0.35052083333333334" />
         <entry key="..\:/Data/Dev/Android/Personal/MyAnimeList/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.36102564102564105" />
       </map>

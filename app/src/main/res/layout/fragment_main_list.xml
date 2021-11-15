@@ -20,8 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@{viewModel.seriesObject.imgSrcUrl}" />
+                android:layout_centerInParent="true" />
         </RelativeLayout>
     </FrameLayout>
 </layout>

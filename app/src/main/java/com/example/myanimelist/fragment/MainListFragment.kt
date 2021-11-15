@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.myanimelist.databinding.FragmentMainListBinding
+import com.example.myanimelist.databinding.GridViewItemBinding
 import com.example.myanimelist.viewmodel.MainListViewModel
 
 
