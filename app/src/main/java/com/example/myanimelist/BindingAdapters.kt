@@ -3,8 +3,16 @@ package com.example.myanimelist
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.myanimelist.network.Serie
+
+@BindingAdapter("listData")
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<Serie>?) {
+    val adapter = recyclerView.adapter as ListItemAdapter
+    adapter.submitList(data)
+}
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrlPath: String?) {

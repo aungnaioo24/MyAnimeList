@@ -13,14 +13,11 @@
         android:layout_height="match_parent"
         tools:context=".fragment.MainListFragment">
 
-        <RelativeLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/anime_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true" />
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            tools:itemCount="20"
+            tools:listitem="@layout/list_items"/>
     </FrameLayout>
 </layout>
